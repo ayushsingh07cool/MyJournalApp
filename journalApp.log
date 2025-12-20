@@ -1,3 +1,6 @@
-18:05:13:170 [http-nio-8081-exec-3] INFO  o.a.c.c.C.[.[localhost].[/journal]  -  Initializing Spring DispatcherServlet 'dispatcherServlet'
-18:05:13:172 [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet  -  Initializing Servlet 'dispatcherServlet'
-18:05:13:175 [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet  -  Completed initialization in 3 ms
+19:26:04:854 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer  -  Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+19:26:05:597 [main] INFO  o.a.coyote.http11.Http11NioProtocol  -  Starting ProtocolHandler ["http-nio-8081"]
+19:26:05:608 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer  -  Tomcat started on port 8081 (http) with context path '/journal'
+19:26:05:618 [main] INFO  c.e.journalApp.JournalApplication  -  Started JournalApplication in 11.014 seconds (process running for 12.803)
+19:26:43:045 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown  -  Commencing graceful shutdown. Waiting for active requests to complete
+19:26:43:052 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown  -  Graceful shutdown complete
