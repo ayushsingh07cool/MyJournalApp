@@ -1,0 +1,2 @@
+18:26:59:699 [main] INFO  c.e.journalApp.JournalApplication  -  Starting JournalApplication using Java 24.0.2 with PID 8680 (D:\SpringBoot\journalApp\target\classes started by asky1 in D:\SpringBoot)
+18:26:59:704 [main] INFO  c.e.journalApp.JournalApplication  -  No active profile set, falling back to 1 default profile: "default"
