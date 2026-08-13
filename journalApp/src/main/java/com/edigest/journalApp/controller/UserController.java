@@ -38,6 +38,7 @@ public class UserController {
     public ResponseEntity<?> updateUser(@RequestBody User user){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();
+
         User userInDb = userService.findByuserName(userName);
 
             userInDb.setUserName(user.getUserName());
@@ -54,7 +55,7 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping
+    @GetMapping("/greeting")
     public ResponseEntity<?> greeting(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 

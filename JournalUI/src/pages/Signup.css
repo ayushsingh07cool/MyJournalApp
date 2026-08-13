@@ -1,0 +1,136 @@
+.signup-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    font-family: Arial, sans-serif;
+}
+
+.signup-form {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background-color: white;
+    padding: 40px 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #222;
+    font-size: 28px;
+}
+
+.signup-form input {
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.signup-form input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+
+
+.signup-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #43a047, #2e7d32);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+.signup-form button:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.signup-form button:active {
+    transform: scale(0.98);
+}
+
+.login-text {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.login-text span {
+    color: #2e7d32;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.login-text span:hover {
+    text-decoration: underline;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 15px 15px 48px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+
+

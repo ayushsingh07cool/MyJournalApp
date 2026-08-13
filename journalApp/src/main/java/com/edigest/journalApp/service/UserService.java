@@ -35,13 +35,8 @@ private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder
         return true;
     } catch (Exception e) {
         log.error("Erorr occurred for {}",user.getUserName(),e);
-        log.error("I m Batman");
-        log.debug("I m Batman");
-        log.warn("I m Batman");
         return false;
     }
-
-
     }
 
     public void saveUser(User user){
@@ -64,7 +59,7 @@ private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder
     }
 
     public User findByuserName(String userName){
-        return userRepository.findByuserName(userName);
+        return userRepository.findByUserName(userName);
     }
 
     public void saveAdmin(User user) {

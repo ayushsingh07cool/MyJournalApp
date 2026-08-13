@@ -5,6 +5,7 @@ import com.edigest.journalApp.entity.JournalEntry;
 import com.edigest.journalApp.entity.User;
 import com.edigest.journalApp.service.JournalEntryService;
 import com.edigest.journalApp.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Slf4j
 @RestController
 @RequestMapping("/journal")
 public class JournalEntryControllerV2 {
@@ -31,6 +33,10 @@ public class JournalEntryControllerV2 {
     public ResponseEntity<?> getAllJournalEntriesOfUser(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();
+
+
+
+
        User user = userService.findByuserName(userName);
         List<JournalEntry> all = user.getJournalEntries();
 
@@ -56,7 +62,7 @@ public class JournalEntryControllerV2 {
         }
     }
 
-    @GetMapping("id/{myId}")
+    @GetMapping("/id/{myId}")
     public ResponseEntity<?> getJournalEntryById(@PathVariable ObjectId myId){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();
@@ -74,7 +80,7 @@ public class JournalEntryControllerV2 {
 
 
 
-    @DeleteMapping ("id/{myId}")
+    @DeleteMapping ("/id/{myId}")
     public ResponseEntity<?> deleteJournalEntryById(@PathVariable ObjectId myId){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();
@@ -87,7 +93,7 @@ public class JournalEntryControllerV2 {
     }
 
 
-    @PutMapping("id/{myId}")
+    @PutMapping("/id/{myId}")
     public ResponseEntity<?> updateJournalEntryById(@PathVariable ObjectId myId, @RequestBody JournalEntry newEntry)
     {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

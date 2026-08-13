@@ -23,13 +23,13 @@ public class User {
     private ObjectId id;
     @Indexed(unique = true)
     @NonNull
-   private String userName;
+    private String userName;
 
     private String email;
     private boolean sentimentAnalysis;
 
     @NonNull
-   private String password;
+    private String password;
 
     @DBRef
     private List<JournalEntry> journalEntries = new ArrayList<>();

@@ -5,6 +5,7 @@ import com.edigest.journalApp.entity.User;
 import com.edigest.journalApp.service.UserDetailsServiceImpl;
 import com.edigest.journalApp.service.UserService;
 import com.edigest.journalApp.utils.JwtUtil;
+import org.springframework.dao.DuplicateKeyException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+
+
 
 @RestController
 @RequestMapping("/public")
@@ -36,9 +39,19 @@ public class PublicController {
         return "OK";
     }
 
+
+
     @PostMapping("/signup")
-    public void signup(@RequestBody User user){
-        userService.saveNewUser(user);
+    public ResponseEntity<String> signup(@RequestBody User user){
+        boolean saved = userService.saveNewUser(user);
+
+        if(saved){
+            return ResponseEntity.status(201)
+                    .body("User created successfully");
+        }
+
+        return ResponseEntity.status(409)
+                .body("Username already exists");
     }
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody User user){

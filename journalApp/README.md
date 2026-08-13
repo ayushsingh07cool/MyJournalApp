@@ -6,20 +6,33 @@ A full-stack **personal journaling application** built with **Spring Boot (Java)
 
 ## ✨ Features
 - 📝 Create, update, and delete personal journal entries  
-- 🔒 Secure login & user authentication (Spring Security +BCrypt)  
+- 🔒 Secure login & user authentication (Spring Security +BCrypt + jwt)  
 - 👤 Role-based access for users and admins  
 - 📂 MongoDB Atlas integration for scalable data storage  
 - 🌐 RESTful API endpoints for journal operations  
-- ⚡ React frontend (planned/optional) for a modern, responsive UI  
+- ⚡ React frontend for a modern, responsive UI  
 
 ---
 
 ## 🛠️ Tech Stack
 - **Backend:** Spring Boot 3.x, Spring Web, Spring Security  
 - **Database:** MongoDB Atlas  
-- **Frontend (planned):** React.js + Axios  
+- **Frontend :** React.js + Axios  
 - **Build Tools:** Maven, IntelliJ IDEA  
-- **Other:** Lombok, BCryptPasswordEncoder, CORS configuration  
+- **Other:** Lombok, BCryptPasswordEncoder, CORS configuration, JWT
+
+
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone <repository-url>
+cd JournalApp
+
+
+
 
 ---
 
